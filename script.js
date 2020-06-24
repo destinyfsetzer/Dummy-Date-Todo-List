@@ -28,11 +28,10 @@ let arrayOfTodos = [
   }
 
   const populateTodos = () => {
-    
     let list = document.getElementById("todo-list")
 
-    for (let i=0; 1 < arrayOfTodos.length; i++){
-    let newLI = document.createElement('lI')
+    for (i=0; 1 < arrayOfTodos.length; i++){
+    let newLi = document.createElement('LI')
     let newH1 = document.createElement('H1')
     let newH2 = document.createElement('H2')
     let newH3 = document.createElement('H3')
@@ -49,12 +48,15 @@ let arrayOfTodos = [
 
     let completed = document.createTextNode(arrayOfTodos[i].completed)
     newH4.appendChild(completed)
-
-    newLI.appendChild(newH1)
-    newLI.appendChild(newH2)
-    newLI.appendChild(newH3)
-    newLI.appendChild(newH4)
-    list.appendChild(newLI)
+    newLi.appendChild(newH1)
+    newLi.appendChild(newH2)
+    newLi.appendChild(newH3)
+    newLi.appendChild(newH4)
+    list.appendChild(newLi)
 
     }
   }
+
+  //make it red like bloodshed because i'm dying 
+//   let elementColor = "red"
+//   completed.style.color = elementColor
