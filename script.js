@@ -5,7 +5,7 @@ let arrayOfTodos = [
     "userId": 14,
     "id": 1,
     "title": "delectus aut autem",
-    "completed": false
+    "completed": false          
   },
   {
     "userId": 20,
@@ -14,8 +14,8 @@ let arrayOfTodos = [
     "completed": false
   }]
 
- console.log(arrayOfTodos[0].userId) // => 14
- console.log(arrayOfTodos[1].userId) // => 20
+//  console.log(arrayOfTodos[0].userId) // => 14
+//  console.log(arrayOfTodos[1].userId) // => 20
 
   const fetchTodos = () => {
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -28,9 +28,13 @@ let arrayOfTodos = [
   }
 
   const populateTodos = () => {
+    let helpme = document.getElementById("todo-list")
 
-  }
+    let poop = document.createElement('li')
 
-  let list =  () => { 
-      document.getElementById("todo-list")
+    let fork = document.createTextNode(arrayOfTodos[0].title)
+
+    poop.appendChild(fork)
+
+    helpme.appendChild(poop)
   }
