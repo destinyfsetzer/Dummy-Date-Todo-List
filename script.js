@@ -28,13 +28,18 @@ let arrayOfTodos = [
   }
 
   const populateTodos = () => {
-    let helpme = document.getElementById("todo-list")
+    
+    let helpme = document.getElementById("todo-list") 
+
+    for (i=0; 1 < arrayOfTodos.length; i++){
 
     let poop = document.createElement('li')
 
-    let fork = document.createTextNode(arrayOfTodos[0].title)
+    let fork = document.createTextNode(arrayOfTodos[i].title)
 
     poop.appendChild(fork)
 
     helpme.appendChild(poop)
+    }
+
   }
