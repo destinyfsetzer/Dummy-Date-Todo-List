@@ -97,9 +97,9 @@ const showUnCompleted = () => {
 }
 
 const clearList = () => {
-  const arrayOfTodos = document.getElementById("todo-list")
-  for ( i = 0; i < arrayOfTodos.length; i++)
-  arrayOfTodos[i].innerHTML=null
+  const arrayOfTodos = document.getElementsByTagName("OL")
+  for (i=0; i < arrayOfTodos.length; i++)
+    arrayOfTodos[i].innerHTML=null
 }
 
 
