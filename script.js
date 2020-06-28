@@ -89,11 +89,11 @@ const showCompleted = () => {
   populateTodos(arrayOfCompletedTodos)
 }
 
-const showUnCompleted = () => {
-  let arrayOfUnCompletedTodos = arrayOfTodos.filter(function(todo) {
+const showInCompleted = () => {
+  let arrayOfInCompletedTodos = arrayOfTodos.filter(function(todo) {
     return todo.completed === false
   })
-  populateTodos(arrayOfUnCompletedTodos)
+  populateTodos(arrayOfInCompletedTodos)
 }
 
 const clearList = () => {
