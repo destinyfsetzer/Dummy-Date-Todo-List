@@ -13,14 +13,17 @@ let arrayOfTodos = [
   }
 ]
 
+let arrayOfUserTodos = []
+let arrayOfCompletedTodos = []
+let arrayOfInCompletedTodos =[]
 let x = ""
+let fontColor = ""
+let list = document.getElementById("todo-list")
 
 const storeID = (num) => {
   x = parseInt (num)
   console.log (num)
 }
-
-let fontColor = ""
 
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
@@ -37,7 +40,6 @@ const populateAllTodos = () => {
 }
 
 const populateTodos = (arr) => {
-  let list = document.getElementById("todo-list")
 
   for (i=0; i < arr.length; i++){
     
@@ -76,9 +78,10 @@ const populateTodos = (arr) => {
 }
 
 const showUserID = () => {
-  let arrayOfUserTodos = arrayOfTodos.filter(function(numID) {
-    return numID.userId === x
+  let arrayOfUserTodos = arrayOfTodos.filter(function(todo) {
+    return todo.userId === x
   })
+  clearList()
   populateTodos(arrayOfUserTodos)
 }
 
@@ -86,6 +89,7 @@ const showCompleted = () => {
   let arrayOfCompletedTodos = arrayOfTodos.filter(function(todo) {
     return todo.completed === true
   })
+  clearList()
   populateTodos(arrayOfCompletedTodos)
 }
 
@@ -93,6 +97,7 @@ const showInCompleted = () => {
   let arrayOfInCompletedTodos = arrayOfTodos.filter(function(todo) {
     return todo.completed === false
   })
+  clearList()
   populateTodos(arrayOfInCompletedTodos)
 }
 
@@ -100,7 +105,9 @@ const clearList = () => {
   const arrayOfTodos = document.getElementsByTagName("OL")
   for (i=0; i < arrayOfTodos.length; i++)
     arrayOfTodos[i].innerHTML=null
+
+let element = document.getElementById("todo")
+ while (list.firstChild) {
+  list.removeChild(list.firstChild);
 }
-
-
-
+}
