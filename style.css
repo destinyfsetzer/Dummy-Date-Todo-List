@@ -1,0 +1,20 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: teal;
+    font-size: 40px;
+}
+
+li {
+    text-align: left;
+}
+
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: sienna;
+    background-color: whitesmoke;
+    border-color: sienna;
+}

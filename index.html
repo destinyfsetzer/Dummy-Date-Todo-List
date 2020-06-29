@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
+
 <body>
-
-    <button onclick="fetchTodos()">Fetch Todos</button>
- <button onclick="logTodos()">Log Todos</button>
- <button onclick="populateTodos()">Populate Todos</button>
- <ol id="todo-list">
-   <!--lI's will go here-->
- </ol>
-
- <script src="script.js"></script>
+  <h1>Why is this so Hard?</h1>
+  <br>
+  <button onclick="fetchTodos()">Fetch Todos</button>
+  <button onclick="logTodos()">Log Todos</button>
+  <button onclick="populateAllTodos()">Populate Todos</button>
+  <label for="userID">User ID</label>
+  <input onkeyup="storeID(this.value)" type="number" min="1" max="10" id="userID" value=""><br>
+  <button type="button" onclick="showUserID()">Show User ID</button>
+  <button type="button" onclick="showCompleted()">Show Completed</button>
+  <button type="button" onclick="showInCompleted()">Show Incomplete</button>
+  <button type="button" onclick="clearList()">Clear List</button>
+  <ol id="todo-list">
+  <!--lI's will go here-->
+  </ol>
+  <script src="script.js"></script>
 </body>
+
 </html>
