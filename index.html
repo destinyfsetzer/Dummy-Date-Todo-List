@@ -15,7 +15,7 @@
   <button onclick="logTodos()">Log Todos</button>
   <button onclick="populateAllTodos()">Populate Todos</button>
   <label for="userID">User ID</label>
-  <input onkeyup="storeID(this.value)" type="text" id="userID" value=""><br>
+  <input onkeyup="storeID(this.value)" type="number" min="1" max="10" id="userID" value=""><br>
   <button type="button" onclick="showUserID()">Show User ID</button>
   <button type="button" onclick="showCompleted()">Show Completed</button>
   <button type="button" onclick="showInCompleted()">Show Incomplete</button>
